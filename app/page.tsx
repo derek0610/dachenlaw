@@ -1,95 +1,55 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
+'use client';
+import Image from 'next/image';
+import BackgrounPhoto from '@/public/Background.svg';
+import BlobPhoto from '@/public/RegularBlob.svg';
+import GroupPhoto from '@/public/Group.png';
+import {
+	StyledBannerWrapper,
+	StyledContentWrapper,
+	StyledLawyerPhoto,
+	StyledSlogan,
+	StyledSlogaDescription,
+	StyledBlobPhoto,
+	StyledBackgroundImage,
+} from './styles';
+import Box from '@mui/material/Box';
+import { StyledButton } from './_components/styles';
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	return (
+		<main>
+			<StyledBannerWrapper>
+				<StyledBackgroundImage
+					src={BackgrounPhoto}
+					fill={true}
+					alt="banner image"
+				/>
+				<StyledContentWrapper>
+					<div>
+						<StyledSlogan>
+							Challenging the status quo to serve clients better
+						</StyledSlogan>
+						<StyledSlogaDescription>
+							Our work is recognized by clients from around the world, and we
+							firmly believe in teamwork, legal ethics, and contributing to
+							society. At Dachen Law Firm, we uphold human-centric corporate
+							values, which we consider the key to achieving our client&apos;
+							business visions.
+						</StyledSlogaDescription>
+						<StyledButton>Know More</StyledButton>
+					</div>
+					<Box position="relative">
+						<StyledLawyerPhoto
+							width={700}
+							src={GroupPhoto}
+							alt="lawyers image"
+						/>
+						<StyledBlobPhoto width={120} src={BlobPhoto} alt="lawyers image" />
+					</Box>
+				</StyledContentWrapper>
+			</StyledBannerWrapper>
+			<div style={{ display: 'flex', flexWrap: 'wrap', height: '1000px' }}>
+				hi
+			</div>
+		</main>
+	);
 }
