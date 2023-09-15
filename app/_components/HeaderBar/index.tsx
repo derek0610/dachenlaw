@@ -10,9 +10,9 @@ import {
 	StyledAppBar,
 	StyledToolBar,
 	StyledListItemButton,
-	StyledButton,
 } from './styles';
 import { PRIMARY } from '@constants/color';
+import { StyledButton } from '../Button/styles';
 
 const Logo = () => {
 	return <LogoWrapper>DENTONS</LogoWrapper>;

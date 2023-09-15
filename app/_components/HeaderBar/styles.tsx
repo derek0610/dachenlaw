@@ -1,10 +1,9 @@
 import { styled } from '@mui/system';
 import List from '@mui/material/List';
-import { PRIMARY, GRAY, PRIMARY_LIGHTEN_2 } from '@constants/color';
+import { PRIMARY, GRAY } from '@constants/color';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import ListItemButton from '@mui/material/ListItemButton';
-import Button from '@mui/material/Button';
 
 const LogoWrapper = styled('div')(() => ({
 	fontWeight: '700',
@@ -28,8 +27,8 @@ const StyledAppBar = styled(AppBar)(() => ({
 const StyledToolBar = styled(Toolbar)(() => ({
 	margin: '0px auto',
 	width: '100%',
-	maxWidth: '1280px',
-	padding: '16px 40px',
+	maxWidth: '1300px',
+	padding: '16px 24px',
 	justifyContent: 'space-between',
 }));
 
@@ -41,24 +40,10 @@ const StyledListItemButton = styled(ListItemButton)(() => ({
 	},
 }));
 
-const StyledButton = styled(Button)(() => ({
-	color: PRIMARY,
-	border: `2px solid ${PRIMARY}`,
-	borderRadius: '8px',
-	fontWeight: 900,
-	padding: '12px 14px',
-	'&:hover': {
-		background: PRIMARY_LIGHTEN_2,
-		color: 'white',
-		border: `2px solid ${PRIMARY_LIGHTEN_2}`,
-	},
-}));
-
 export {
 	LogoWrapper,
 	StyledList,
 	StyledAppBar,
 	StyledToolBar,
 	StyledListItemButton,
-	StyledButton,
 };
