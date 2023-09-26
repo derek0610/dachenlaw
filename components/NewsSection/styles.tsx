@@ -1,3 +1,4 @@
+'use client';
 import { styled } from '@mui/system';
 import { GRAY, PRIMARY, BLACK } from '@constants/color';
 import Image from 'next/image';

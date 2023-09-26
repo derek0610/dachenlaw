@@ -1,17 +1,22 @@
-'use client';
-import { StyledContentWrapper } from './styles';
-import BannerSection from './_components/BannerSection';
-import FeatureSection from './_components/FeatureSection';
+import BannerSection from '@/components/BannerSection';
+import FeatureSection from '@/components/FeatureSection';
+import NewsSection from '@/components/NewsSection';
 export default function Home() {
 	return (
 		<main>
 			<BannerSection />
 			<FeatureSection />
-			<StyledContentWrapper>
-				<h1>ejiwjeiw</h1>
-			</StyledContentWrapper>
-			<div style={{ display: 'flex', flexWrap: 'wrap', height: '1000px' }}>
-				hi
+			<NewsSection />
+
+			<div
+				style={{
+					display: 'flex',
+					flexWrap: 'wrap',
+					width: '100%',
+					height: '1000px',
+				}}
+			>
+				<h1>hi~~~</h1>
 			</div>
 		</main>
 	);
