@@ -2,7 +2,7 @@ import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 
 import styles from './styles.module.css';
-const NewsCard = ({ cardData }) => {
+const NewsCard = ({ cardData }: any) => {
 	return (
 		<Grid item xs={12} sm={6} md={6} lg={4}>
 			<div className={styles.cardWrapper}>
