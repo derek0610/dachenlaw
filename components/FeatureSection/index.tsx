@@ -1,6 +1,5 @@
 import IconGrow from '@/public/IconGrow.png';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Image from 'next/image';
 import IconProtect from '@/public/IconProtect.png';
 import IconOperate from '@/public/IconOperate.png';
@@ -21,7 +20,7 @@ const FeatureSection = () => {
 
 				<Grid container spacing={3}>
 					<Grid lg={3} xs={12} item>
-						<Box display="flex" flexDirection="column" alignItems="center">
+						<div className={styles.container}>
 							<Image
 								src={IconGrow}
 								width={120}
@@ -36,10 +35,10 @@ const FeatureSection = () => {
 								Dentons can provide the legal and advisory solutions you need to
 								grow, anywhere in the world you need us.
 							</p>
-						</Box>
+						</div>
 					</Grid>
 					<Grid lg={3} xs={12} item>
-						<Box display="flex" flexDirection="column" alignItems="center">
+						<div className={styles.container}>
 							<Image
 								src={IconProtect}
 								width={120}
@@ -55,10 +54,10 @@ const FeatureSection = () => {
 								Dentons can provide the legal and advisory solutions you need to
 								grow, anywhere in the world you need us.
 							</p>
-						</Box>
+						</div>
 					</Grid>
 					<Grid lg={3} xs={12} item>
-						<Box display="flex" flexDirection="column" alignItems="center">
+						<div className={styles.container}>
 							<Image
 								src={IconOperate}
 								width={120}
@@ -73,10 +72,10 @@ const FeatureSection = () => {
 								Dentons can provide the legal and advisory solutions you need to
 								grow, anywhere in the world you need us.
 							</p>
-						</Box>
+						</div>
 					</Grid>
 					<Grid lg={3} xs={12} item>
-						<Box display="flex" flexDirection="column" alignItems="center">
+						<div className={styles.container}>
 							<Image
 								src={IconFinance}
 								width={120}
@@ -91,7 +90,7 @@ const FeatureSection = () => {
 								Dentons can provide the legal and advisory solutions you need to
 								grow, anywhere in the world you need us.
 							</p>
-						</Box>
+						</div>
 					</Grid>
 				</Grid>
 			</div>

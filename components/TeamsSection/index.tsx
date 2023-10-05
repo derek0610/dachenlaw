@@ -1,6 +1,3 @@
-import IconGrow from '@/public/IconGrow.png';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Image from 'next/image';
 import IconButton from '@mui/material/IconButton';
 
@@ -11,7 +8,7 @@ import styles from './styles.module.css';
 const TeamsSection = () => {
 	return (
 		<div className={styles.teamsWrapper}>
-			{teamsData.map((item, index) => (
+			{teamsData.map((item: any, index: number) => (
 				<div key={index}>
 					<div
 						className={`${styles.imageWrapper} ${

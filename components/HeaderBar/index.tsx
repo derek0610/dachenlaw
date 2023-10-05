@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import List from '@mui/material/List';
@@ -37,7 +36,7 @@ const HeaderBar = () => {
 						justifyContent: 'space-between',
 					}}
 				>
-					<Box display="flex" alignItems="center">
+					<div className={styles.leftContainer}>
 						<Logo />
 						<nav>
 							<List sx={{ display: 'flex', marginLeft: '20px' }}>
@@ -62,7 +61,7 @@ const HeaderBar = () => {
 								))}
 							</List>
 						</nav>
-					</Box>
+					</div>
 					<Button variant="outlined" disableElevation>
 						Contact us!
 					</Button>
