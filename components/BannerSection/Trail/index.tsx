@@ -14,7 +14,7 @@ const Trail = ({ children }: { children: React.ReactNode }) => {
 		config: { mass: 11, tension: 1200, friction: 100 },
 		opacity: inView ? 1 : 0,
 		x: inView ? 0 : 20,
-		height: inView && isMobile ? 40 : inView ? 80 : 0,
+		height: inView && isMobile ? 40 : inView ? 70 : 0,
 	});
 
 	return (

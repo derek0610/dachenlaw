@@ -37,6 +37,12 @@ const theme = createTheme({
 							border: `2px solid ${Colors.PRIMARY_LIGHTEN_2}`,
 						},
 					}),
+					...(ownerState.variant === 'text' && {
+						color: Colors.PRIMARY,
+						borderRadius: '8px',
+						fontWeight: 900,
+						padding: '12px 14px',
+					}),
 				}),
 			},
 		},

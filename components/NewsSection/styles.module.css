@@ -14,30 +14,20 @@
 	width: 100%;
 	max-width: 1300px;
 	margin: 0px auto;
-	min-height: 900px;
-	padding: 100px 24px 80px;
+	padding: 60px 24px 40px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .title {
-	color: var(--black);
+	font-weight: 500;
+	color: var(--primary);
 	font-size: 48px;
 	position: relative;
 	z-index: 0;
-	margin-bottom: 60px;
-}
-
-.title::after {
-	position: relative;
-	filter: blur(3px);
-	left: 26px;
-	z-index: -1;
-	bottom: 28px;
-	content: '';
-	display: block;
-	width: 100%;
-	height: 15px;
-	background: rgba(255, 255, 255, 0.8);
+	margin-bottom: 40px;
+	@media screen and (max-width: 600px) {
+		font-size: 24px;
+	}
 }

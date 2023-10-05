@@ -1,7 +1,7 @@
 // 'use client';
 import React from 'react';
 import GroupPhoto from '@/public/Group.png';
-import BackgrounPhoto from '@/public/Background.svg';
+import BackgroundPhoto from '@/public/Background.svg';
 import BlobPhoto from '@/public/RegularBlob.svg';
 // import { StyledButton } from '../Button/styles';
 import Button from '@mui/material/Button';
@@ -13,7 +13,7 @@ const BannerSection = () => {
 	return (
 		<div className={styles.bannerWrapper}>
 			<Image
-				src={BackgrounPhoto}
+				src={BackgroundPhoto}
 				fill={true}
 				style={{ transform: 'scale(1.05)', filter: 'blur(10px)' }}
 				alt="banner"

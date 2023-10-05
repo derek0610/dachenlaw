@@ -9,7 +9,7 @@ const NewsCard = ({ cardData }: any) => {
 				<div className={styles.imageWrapper}>
 					<Image
 						src={`https://picsum.photos/id/${Math.floor(
-							Math.random() * 50
+							Math.random() * 1000
 						)}/300/200`}
 						fill={true}
 						alt="news photo"

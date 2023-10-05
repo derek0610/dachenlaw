@@ -29,21 +29,43 @@ const newsData = [
 		description:
 			' This decision is yet another example of the growing body of climate change litigation in Australia. It demonstrates the obligations of consent authorities to thoroughly consider the Scope 1, Scope 2 and Scope 3 greenhouse gas emissions of mining projects and the compatibility of the project with State and national policies targeting climate change.',
 	},
+	{
+		id: 2,
+		title:
+			'Climate change litigation update: Challenge to coal seam gas project approval dismissed',
+		date: 'November 2, 2021',
+		description:
+			' This decision is yet another example of the growing body of climate change litigation in Australia. It demonstrates the obligations of consent authorities to thoroughly consider the Scope 1, Scope 2 and Scope 3 greenhouse gas emissions of mining projects and the compatibility of the project with State and national policies targeting climate change.',
+	},
+	{
+		id: 2,
+		title:
+			'Climate change litigation update: Challenge to coal seam gas project approval dismissed',
+		date: 'November 2, 2021',
+		description:
+			' This decision is yet another example of the growing body of climate change litigation in Australia. It demonstrates the obligations of consent authorities to thoroughly consider the Scope 1, Scope 2 and Scope 3 greenhouse gas emissions of mining projects and the compatibility of the project with State and national policies targeting climate change.',
+	},
+	{
+		id: 2,
+		title:
+			'Climate change litigation update: Challenge to coal seam gas project approval dismissed',
+		date: 'November 2, 2021',
+		description:
+			' This decision is yet another example of the growing body of climate change litigation in Australia. It demonstrates the obligations of consent authorities to thoroughly consider the Scope 1, Scope 2 and Scope 3 greenhouse gas emissions of mining projects and the compatibility of the project with State and national policies targeting climate change.',
+	},
 ];
 
 const NewsSection = () => {
 	return (
 		<div className={styles.newsWrapper}>
 			<div className={styles.contentWrapper}>
-				<h2 className={styles.title}>Featured Insights</h2>
-				<Grid container spacing={5}>
+				{/* <h2 className={styles.title}>Featured Insights</h2> */}
+				<Grid container spacing={4}>
 					{newsData.map((item, index) => (
 						<NewsCard cardData={item} key={index} />
 					))}
 				</Grid>
-				<Button variant="outlined" sx={{ margin: '60px 0px 0px auto' }}>
-					Read more
-				</Button>
+				<Button sx={{ margin: '40px 0px 0px auto' }}>Read more</Button>
 			</div>
 		</div>
 	);
