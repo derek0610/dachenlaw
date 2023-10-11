@@ -3,24 +3,22 @@ import FeatureSection from '@/app/components/FeatureSection';
 import NewsSection from '@/app/components/NewsSection';
 import TeamsSection from '@/app/components/TeamsSection';
 import BuildingSection from '@/app/components/BuildingSection';
-export default function Home() {
+import { getDictionary, localeType } from '@dictionaries';
+
+type HomeProps = {
+	params: {
+		lang: localeType;
+	};
+};
+export default async function Home({ params: { lang } }: HomeProps) {
+	const dict = await getDictionary(lang);
 	return (
 		<main>
-			<BannerSection />
+			<BannerSection dict={dict} />
 			<FeatureSection />
 			<NewsSection />
 			<TeamsSection />
 			{/* <BuildingSection /> */}
-			{/* <div
-				style={{
-					display: 'flex',
-					flexWrap: 'wrap',
-					width: '100%',
-					height: '1000px',
-				}}
-			>
-				<h1>hi~~~</h1>
-			</div> */}
 		</main>
 	);
 }

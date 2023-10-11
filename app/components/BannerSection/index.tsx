@@ -8,8 +8,13 @@ import Button from '@mui/material/Button';
 import styles from './styles.module.css';
 import Image from 'next/image';
 import Trail from './Trail';
+import { dictType } from '@dictionaries';
 
-const BannerSection = () => {
+type BannerSectionProps = {
+	dict: dictType;
+};
+
+const BannerSection = async ({ dict }: BannerSectionProps) => {
 	return (
 		<div className={styles.bannerWrapper}>
 			<Image
@@ -26,13 +31,9 @@ const BannerSection = () => {
 						<span>clients better</span>
 					</Trail>
 					<p className={styles.sloganDescription}>
-						Our work is recognized by clients from around the world, and we
-						firmly believe in teamwork, legal ethics, and contributing to
-						society. At Dachen Law Firm, we uphold human-centric corporate
-						values, which we consider the key to achieving our client&apos;
-						business visions.
+						{dict['home.banner.description']}
 					</p>
-					<Button variant="outlined">Know More</Button>
+					<Button variant="outlined">{dict['button.knowMore']}</Button>
 				</div>
 				<div className={styles.lawyerWrapper}>
 					<Image
