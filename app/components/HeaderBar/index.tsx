@@ -9,6 +9,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import styles from './styles.module.css';
 import LanguageSwitch from './LanguageSwitch';
 import Colors from '@colors';
+import { dictType } from '@dictionaries';
+import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
 
 const Logo = () => {
 	return <div className={styles.logoWrapper}>DENTONS</div>;
@@ -16,9 +19,11 @@ const Logo = () => {
 
 const navItems = ['News', 'About', 'Team', 'View', 'Locations'];
 
-const HeaderBar = () => {
-	// const router = useRouter();
+type HeaderBarProps = {
+	dict: dictType;
+};
 
+const HeaderBar = ({ dict }: HeaderBarProps) => {
 	return (
 		<React.Fragment>
 			<AppBar
@@ -30,6 +35,7 @@ const HeaderBar = () => {
 			>
 				<Toolbar
 					sx={{
+						height: '84.5px',
 						margin: '0px auto',
 						width: '100%',
 						maxWidth: '1300px',
@@ -40,13 +46,9 @@ const HeaderBar = () => {
 					<div className={styles.leftContainer}>
 						<Logo />
 						<nav>
-							<List sx={{ display: 'flex', marginLeft: '20px' }}>
+							<List sx={{ display: 'flex', marginLeft: '20px' }} disablePadding>
 								{navItems.map((item) => (
-									<ListItem
-										key={item}
-										disablePadding
-										// onClick={() => router.push(item)}
-									>
+									<ListItem key={item} disablePadding>
 										<ListItemButton
 											sx={{
 												color: Colors.GRAY,
@@ -65,9 +67,27 @@ const HeaderBar = () => {
 					</div>
 					<div>
 						<LanguageSwitch />
-						<Button variant="outlined" disableElevation>
-							Contact us!
+						<Button
+							variant="outlined"
+							disableElevation
+							sx={{
+								'@media screen and (max-width: 800px)': {
+									display: 'none',
+								},
+							}}
+						>
+							{dict['button.contactUs']}
 						</Button>
+						<IconButton
+							sx={{
+								color: Colors.PRIMARY,
+								'@media screen and (min-width: 800px)': {
+									display: 'none',
+								},
+							}}
+						>
+							<MenuIcon />
+						</IconButton>
 					</div>
 				</Toolbar>
 			</AppBar>
