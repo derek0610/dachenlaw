@@ -46,6 +46,18 @@ const theme = createTheme({
 				}),
 			},
 		},
+		MuiDrawer: {
+			styleOverrides: {
+				root: ({ ownerState }) => ({
+					...(ownerState.variant === 'temporary' && {
+						'.MuiBackdrop-root': {
+							background: 'transparent',
+							backdropFilter: 'blur(3px)',
+						},
+					}),
+				}),
+			},
+		},
 	},
 });
 

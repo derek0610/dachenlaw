@@ -20,7 +20,7 @@
 		],
 		"paths": {
 			"@/*": ["./*"],
-			"@colors": ["./components/ThemeRegistry/colors"]
+			"@colors": ["./app/components/ThemeRegistry/colors"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
