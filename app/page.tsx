@@ -1,8 +1,8 @@
-import BannerSection from '@/components/BannerSection';
-import FeatureSection from '@/components/FeatureSection';
-import NewsSection from '@/components/NewsSection';
-import TeamsSection from '@/components/TeamsSection';
-import BuildingSection from '@/components/BuildingSection';
+import BannerSection from '@/app/components/BannerSection';
+import FeatureSection from '@/app/components/FeatureSection';
+import NewsSection from '@/app/components/NewsSection';
+import TeamsSection from '@/app/components/TeamsSection';
+import BuildingSection from '@/app/components/BuildingSection';
 export default function Home() {
 	return (
 		<main>

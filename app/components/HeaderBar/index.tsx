@@ -7,6 +7,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import ListItemButton from '@mui/material/ListItemButton';
 import styles from './styles.module.css';
+import LanguageSwitch from './LanguageSwitch';
 import Colors from '@colors';
 
 const Logo = () => {
@@ -62,9 +63,12 @@ const HeaderBar = () => {
 							</List>
 						</nav>
 					</div>
-					<Button variant="outlined" disableElevation>
-						Contact us!
-					</Button>
+					<div>
+						<LanguageSwitch />
+						<Button variant="outlined" disableElevation>
+							Contact us!
+						</Button>
+					</div>
 				</Toolbar>
 			</AppBar>
 		</React.Fragment>

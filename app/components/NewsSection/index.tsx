@@ -59,7 +59,7 @@ const NewsSection = () => {
 	return (
 		<div className={styles.newsWrapper}>
 			<div className={styles.contentWrapper}>
-				{/* <h2 className={styles.title}>Featured Insights</h2> */}
+				<h2 className={styles.title}>Featured Insights</h2>
 				<Grid container spacing={4}>
 					{newsData.map((item, index) => (
 						<NewsCard cardData={item} key={index} />
