@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link';
 import Button from '@mui/material/Button';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -14,7 +15,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 
 const Logo = () => {
-	return <div className={styles.logoWrapper}>DENTONS</div>;
+	return (
+		<Link href="/" className={styles.logoWrapper}>
+			DENTONS
+		</Link>
+	);
 };
 
 const navItems = ['News', 'About', 'Team', 'View', 'Locations'];
