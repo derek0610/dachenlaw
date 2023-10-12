@@ -14,7 +14,7 @@ type BannerSectionProps = {
 	dict: dictType;
 };
 
-const BannerSection = async ({ dict }: BannerSectionProps) => {
+const BannerSection = ({ dict }: BannerSectionProps) => {
 	return (
 		<div className={styles.bannerWrapper}>
 			<Image

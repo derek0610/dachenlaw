@@ -15,8 +15,8 @@ export default async function Home({ params: { lang } }: HomeProps) {
 	return (
 		<main>
 			<BannerSection dict={dict} />
-			<FeatureSection />
-			<NewsSection />
+			<FeatureSection dict={dict} />
+			<NewsSection dict={dict} />
 			<TeamsSection />
 			{/* <BuildingSection /> */}
 		</main>
